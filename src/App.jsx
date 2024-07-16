@@ -1,12 +1,13 @@
-
+import ToolContainer from "./components/ToolContainer/ToolContainer";
 import './App.css'
 
 function App() {
   
 
   return (
-    <div>
-      <h1>App Component</h1>
+    <div id="app-container">
+      <h1>CSS Code Generator</h1>
+      <ToolContainer />
     </div>
   )
 }
