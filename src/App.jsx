@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div id="app-container">
-      <h1>CSS Code Generator</h1>
+      <h1>CSS Gradient Code Generator</h1>
       <ToolContainer />
     </div>
   )
