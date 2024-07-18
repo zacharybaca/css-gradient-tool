@@ -3,15 +3,21 @@ import ToolContainer from "./components/ToolContainer/ToolContainer";
 import './App.css'
 
 function App() {
-  const [color, setColor] = React.useState("#FF0000");
+  const [color, setColor] = React.useState({
+    color1: "#FF0000",
+    color2: "#FF0000",
+    color3: "#FF0000"
+  })
 
   function handleChange(e) {
     const {name, value} = e.target;
-    setColor(...prevState => ({
+    e.preventDefault();
+    console.log('E: ', e.target.name)
+    
+    setColor(prevState => ({
       ...prevState,
       [name]: value
     }))
-    
   }
 
   return (
