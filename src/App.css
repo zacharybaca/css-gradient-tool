@@ -11,11 +11,10 @@
     border: 2px solid black;
 }
 
-#app-container h1 {
+#main-heading {
     font-family: "Arsenal SC", sans-serif;
     font-size: 30px;
     letter-spacing: 10px;
     width: 68%;
     padding-bottom: 1%;
-    border: 1px solid blue;
 }
