@@ -6,7 +6,8 @@ function App() {
   const [color, setColor] = React.useState({
     color1: "#FF0000",
     color2: "#FF0000",
-    color3: "#FF0000"
+    color3: "#FF0000",
+    angle: 0
   })
 
   function handleChange(e) {
