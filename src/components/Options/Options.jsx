@@ -11,9 +11,21 @@ export default function Options(props) {
             
             <div id="color-info-container">
                 <div id="color-options-container">
-                    <h4>Color 1</h4>
-                    <h4>{props.color}</h4>
-                    <input type="color" name="color1" value={props.color} onChange={props.handleChange}/>
+                    <div id="color-one">
+                        <h4>Color 1</h4>
+                        <h4>{props.color.color1}</h4>
+                        <input type="color" name="color1" value={props.color1} onChange={props.handleChange}/>
+                    </div>
+                   <div id="color-two">
+                        <h4>Color 2</h4>
+                        <h4>{props.color.color2}</h4>
+                        <input type="color" name="color2" value={props.color2} onChange={props.handleChange} />
+                   </div>
+                   <div id="color-three">
+                        <h4>Color 3</h4>
+                        <h4>{props.color.color3}</h4>
+                        <input type="color" name="color3" value={props.color3} onChange={props.handleChange} />
+                   </div>
                 </div>
             </div>
         </div>
