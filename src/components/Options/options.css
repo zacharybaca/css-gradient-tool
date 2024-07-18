@@ -1,5 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 #options-container {
+    display: flex;
+    flex-direction: column;
     width: 35%;
     height: 60vh;
+    border: 2px solid black;
+}
+
+#options-heading-container {
+    font-family: "Arsenal SC", sans-serif;
+    font-size: 30px;
+    letter-spacing: 10px;
+    width: 100%;
+    height: 6vh;
+    border: 1px solid blue;
+    padding-top: 3%;
+    font-weight: 500;
+}
+
+#color-info-container {
+    display: flex;
+    height: 100vh;
+    border: 3px solid orange;
+}
+
+#color-options-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     border: 2px solid black;
 }
