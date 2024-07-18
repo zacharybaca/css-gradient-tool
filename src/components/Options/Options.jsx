@@ -26,6 +26,11 @@ export default function Options(props) {
                         <h4>{props.color.color3}</h4>
                         <input type="color" name="color3" value={props.color3} onChange={props.handleChange} />
                    </div>
+                   <div id="angle">
+                        <h4>Angle</h4>
+                        <input type="number" name="angle" value={props.angle} onChange={props.handleChange} />
+                        <button>➕</button>
+                   </div>
                 </div>
             </div>
         </div>
