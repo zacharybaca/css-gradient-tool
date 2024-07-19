@@ -10,6 +10,8 @@ function App() {
     angle: 0
   })
 
+ 
+
   function handleChange(e) {
     const {name, value} = e.target;
     e.preventDefault();
@@ -20,6 +22,17 @@ function App() {
       [name]: value
     }))
   }
+
+  React.useEffect(() => {
+    setColor(prevState => ({
+      ...prevState,
+      color: {
+        color1: color.color1,
+        color2: color.color2,
+        color3: color.color3
+      }
+    }))
+  }, [])
 
   return (
     <div id="app-container">
