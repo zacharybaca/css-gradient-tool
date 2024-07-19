@@ -10,8 +10,16 @@ function App() {
     angle: 0
   })
 
- 
-
+  async function copy(text) {
+    try {
+      if (navigator?.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  }
+  
   function handleChange(e) {
     const {name, value} = e.target;
     e.preventDefault();
@@ -37,7 +45,7 @@ function App() {
   return (
     <div id="app-container">
       <h1 id="main-heading">CSS Gradient Code Generator</h1>
-      <ToolContainer color={color} setColor={setColor} handleChange={handleChange}/>
+      <ToolContainer color={color} setColor={setColor} copy={copy} handleChange={handleChange}/>
     </div>
   )
 }
