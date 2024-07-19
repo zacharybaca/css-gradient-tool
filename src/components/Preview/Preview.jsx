@@ -23,6 +23,9 @@ export default function Preview(props) {
                    
                 </textarea>
             </div>
+            <div id="button-container">
+                <button type="button" id="copy" onClick={() => props.copy(value.background)}>Copy Code</button>
+            </div>
         </div>
     )
 }
