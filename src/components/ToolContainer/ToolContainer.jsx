@@ -5,7 +5,7 @@ import "./tool-container.css";
 export default function ToolContainer(props) {
     return (
         <div id="tool-container">
-            <Preview color={props.color}/>
+            <Preview color={props.color} copy={props.copy}/>
             <Options color={props.color} setColor={props.setColor} handleChange={props.handleChange}/>
         </div>
     )
