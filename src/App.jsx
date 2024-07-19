@@ -23,7 +23,6 @@ function App() {
   function handleChange(e) {
     const {name, value} = e.target;
     e.preventDefault();
-    console.log('E: ', e.target.name)
     
     setColor(prevState => ({
       ...prevState,
