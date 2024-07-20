@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "./options.css";
 
 
@@ -29,7 +30,7 @@ export default function Options(props) {
                    <div id="angle">
                         <h4>Angle</h4>
                         <input type="number" name="angle" value={props.angle} onChange={props.handleChange} />
-                        <button>➕</button>
+                        <button id="showAndHide" onClick={() => props.toggle('color-three')}>➕</button>
                    </div>
                 </div>
             </div>

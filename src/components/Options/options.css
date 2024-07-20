@@ -43,8 +43,7 @@
 }
 
 #color-three {
-    display: flex;
-    justify-content: space-between;
+    display: none;
 }
 
 #angle {
