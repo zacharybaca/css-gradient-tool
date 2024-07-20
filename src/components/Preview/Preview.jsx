@@ -7,14 +7,14 @@ export default function Preview(props) {
     return (
         <div id="preview-container">
             <div id="gradient-preview-container">
-                <div id="gradient" style={{ background: props.color.color3 !== null ? `linear-gradient(${props.color.angle}deg, ${props.color.color1}, ${props.color.color2}, ${props.color.color3})` : `linear-gradient(${props.color.angle}deg, ${props.color.color1}, ${props.color.color2})` }}>
+                <div id="gradient" style={{ background: props.color.color3 !== "" ? `linear-gradient(${props.color.angle}deg, ${props.color.color1}, ${props.color.color2}, ${props.color.color3})` : `linear-gradient(${props.color.angle}deg, ${props.color.color1}, ${props.color.color2})` }}>
                 </div>
             </div>
             <div id="generated-code-container">
                 <textarea 
                     id="generated-code" 
                     value={
-                        props.color.color3 !== null ? `background: linear-gradient(${props.color.angle}deg, ${props.color.color1}, ${props.color.color2}, ${props.color.color3}),
+                        props.color.color3 !== "" ? `background: linear-gradient(${props.color.angle}deg, ${props.color.color1}, ${props.color.color2}, ${props.color.color3}),
                         -moz-background: linear-gradient(${props.color.angle}deg, ${props.color.color1}, ${props.color.color2}, ${props.color.color3}),
                         -webkit-background: linear-gradient(${props.color.angle}deg, ${props.color.color1}, ${props.color.color2}, ${props.color.color3})` :  
                         // for 3 color inputs
@@ -26,6 +26,7 @@ export default function Preview(props) {
             </div>
             <div id="button-container">
                 <button type="button" id="copy" onClick={() => props.copy(generatedCode.value)}>Copy Code</button>
+                <button type="button" id="reset" onClick={() => props.reset()}>Reset Color Values</button>
             </div>
         </div>
     )

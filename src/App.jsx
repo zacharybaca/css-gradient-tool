@@ -6,7 +6,7 @@ function App() {
   const [color, setColor] = React.useState({
     color1: "#FF0000",
     color2: "#FF0000",
-    color3: null,
+    color3: "",
     angle: 0
   })
 
@@ -20,6 +20,16 @@ function App() {
     }
   }
 
+  function resetColorValues() {
+    setColor(prevState => ({
+      ...prevState,
+      color1: "#FF0000",
+      color2: "#FF0000",
+      color3: "",
+      angle: 0
+    }))
+  }
+
   function showAndHide(element) {
     let pickedElement = document.getElementById(element);
     let showAndHideButton = document.getElementById('showAndHide');
@@ -28,19 +38,12 @@ function App() {
       return undefined;
     }
   
-    showAndHideButton.innerText = '➕';
-  
     if (pickedElement.style.display === 'none') {
       pickedElement.style.display = 'flex';
       pickedElement.style.justifyContent = 'space-between';
       setColor(prevState => ({
         ...prevState,
-        color: {
-          color1: prevState.color.color1,
-          color2: prevState.color.color2,
-          color3: "#FF0000",
-          angle: prevState.color.angle
-        }
+       color3: "#FF0000"
       }));
       console.log('Color 3 - Flex Display: ', color.color3);
       showAndHideButton.innerText = '➖';
@@ -48,14 +51,8 @@ function App() {
       pickedElement.style.display = 'none';
       setColor(prevState => ({
         ...prevState,
-        color: {
-          color1: prevState.color.color1,
-          color2: prevState.color.color2,
-          color3: null,
-          angle: prevState.color.angle
-        }
+        color3: ""
       }));
-      console.log('Color 3 - No Display: ', color.color3);
       showAndHideButton.innerText = '➕';
     }
   }
@@ -73,19 +70,24 @@ function App() {
   React.useEffect(() => {
     setColor(prevState => ({
       ...prevState,
-      color: {
-        color1: color.color1,
-        color2: color.color2,
-        color3: color.color3,
-        angle: color.angle
-      }
+      color1: color.color1,
+      color2: color.color2,
+      color3: color.color3,
+      angle: color.angle
     }))
   }, [color.color1, color.color2, color.color3, color.angle])
 
   return (
     <div id="app-container">
       <h1 id="main-heading">CSS Gradient Code Generator</h1>
-      <ToolContainer color={color} setColor={setColor} copy={copy} handleChange={handleChange} toggle={showAndHide}/>
+      <ToolContainer 
+        color={color} 
+        setColor={setColor} 
+        copy={copy} 
+        handleChange={handleChange} 
+        toggle={showAndHide} 
+        reset={resetColorValues}
+      />
     </div>
   )
 }

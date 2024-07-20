@@ -14,7 +14,6 @@
     letter-spacing: 10px;
     width: 100%;
     height: 6vh;
-    border: 1px solid blue;
     padding-top: 3%;
     font-weight: 500;
 }
@@ -22,14 +21,12 @@
 #color-info-container {
     display: flex;
     height: 100vh;
-    border: 3px solid orange;
 }
 
 #color-options-container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    border: 2px solid black;
 }
 
 #color-one {

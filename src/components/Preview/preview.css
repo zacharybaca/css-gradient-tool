@@ -39,6 +39,10 @@
     width: 50%;
 }
 
+#reset {
+    width: 50%;
+}
+
 #button-container {
     display: flex;
     justify-content: center;
